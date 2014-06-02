@@ -139,6 +139,9 @@ status "Building runtime environment"
 mkdir -p $build_dir/.profile.d
 echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\";" > $build_dir/.profile.d/nodejs.sh
 
+echo $ENV_DIR
+ls $ENV_DIR
+export LOUDER_DB_URL=`cat $ENV_DIR/LOUDER_DB_URL`
 npm run-script db-migrate-prod
 
 # Post package.json to nomnom service
