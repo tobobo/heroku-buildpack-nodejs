@@ -147,7 +147,7 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
   fi
   
   status "Running database migration"
-  npm run-script db-migrate-prod
+  npm run-script db-migrate-production
 )
 
 # Post package.json to nomnom service
